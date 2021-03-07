@@ -1,27 +1,38 @@
 <form [formGroup]="form">
     <div>
-        Phone : <input formControlName="phoneNo">
+        <span class="form-control-lg " >Name  </span>
+        <span style="color: red;" *ngIf="form.get('name').errors?.required">*</span>
+        <div><input formControlName="name" placeholder="Your answer" class="form-control form-control-lg"></div>
     </div>
     <div>
-        Email : <input formControlName="email">
+        <span class="form-control-lg " >Email   </span>
+        
         <span style="color: red;" *ngIf="form.get('email').errors?.email">Email is invalid</span>
+        <span style="color: red;" *ngIf="form.get('email').errors?.required">*</span>
+        <div><input formControlName="email" placeholder="Your answer" class="form-control form-control-lg"></div>
     </div>
     <div>
-        Password : <input type="password" formControlName="password">
-        <span style="color: red;" *ngIf="form.get('password').errors?.required">Password required</span>
-        <span style="color: red;" *ngIf="form.get('password').errors?.minlength">Password should be at least 8
-            characters</span>
+        <span class="form-control-lg " >Postal Address  </span>
+         
+        <span style="color: red;" *ngIf="form.get('address').errors?.required">*</span>
+        <div><input formControlName="address" placeholder="Your answer" class="form-control form-control-lg"></div>
+        
     </div>
     <div>
-        Confirm Password : <input type="password" formControlName="confirmPassword">
-        <span style="color: red;" *ngIf="form.get('confirmPassword').errors?.required">Password required</span>
+        <span class="form-control-lg " >comments   </span>
+        
+        
+        <div>
+            <input  formControlName="comments" placeholder="Your answer" class="form-control form-control-lg">
+        </div>
     </div>
-    <button [disabled]="form.invalid" (click)="submitForm()">Submit</button>
+    <button class="btn btn-primary" >Submit</button>
+    <!-- <button [disabled]="form.invalid" (click)="submitForm()">Submit</button> -->
 
 </form>
 
-<p> Form Data Below</p>
+<!-- <p> Form Data Below</p>
 
 <code>
     {{form.value | json}}
-</code>
+</code> -->
