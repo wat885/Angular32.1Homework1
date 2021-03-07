@@ -1,35 +1,37 @@
-<form [formGroup]="form">
-    <div>
-        <span class="form-control-lg " >Name  </span>
-        <span style="color: red;" *ngIf="form.get('name').errors?.required">*</span>
-        <div><input formControlName="name" placeholder="Your answer" class="form-control form-control-lg"></div>
-    </div>
-    <div>
-        <span class="form-control-lg " >Email   </span>
-        
-        <span style="color: red;" *ngIf="form.get('email').errors?.email">Email is invalid</span>
-        <span style="color: red;" *ngIf="form.get('email').errors?.required">*</span>
-        <div><input formControlName="email" placeholder="Your answer" class="form-control form-control-lg"></div>
-    </div>
-    <div>
-        <span class="form-control-lg " >Postal Address  </span>
-         
-        <span style="color: red;" *ngIf="form.get('address').errors?.required">*</span>
-        <div><input formControlName="address" placeholder="Your answer" class="form-control form-control-lg"></div>
-        
-    </div>
-    <div>
-        <span class="form-control-lg " >comments   </span>
-        
-        
+<div class="center">
+    <form [formGroup]="form">
         <div>
-            <input  formControlName="comments" placeholder="Your answer" class="form-control form-control-lg">
+            <span class="form-control-lg " >Name  </span>
+            <span style="color: red;" *ngIf="form.get('name').errors?.required">*</span>
+            <div><input formControlName="name" placeholder="Your answer" class="form-control form-control-lg"></div>
         </div>
-    </div>
-    <button class="btn btn-primary" >Submit</button>
-    <!-- <button [disabled]="form.invalid" (click)="submitForm()">Submit</button> -->
-
-</form>
+        <div>
+            <span class="form-control-lg " >Email   </span>
+            
+            <span style="color: red;" *ngIf="form.get('email').errors?.email">Email is invalid</span>
+            <span style="color: red;" *ngIf="form.get('email').errors?.required">*</span>
+            <div><input formControlName="email" placeholder="Your answer" class="form-control form-control-lg"></div>
+        </div>
+        <div>
+            <span class="form-control-lg " >Postal Address  </span>
+             
+            <span style="color: red;" *ngIf="form.get('address').errors?.required">*</span>
+            <div><input formControlName="address" placeholder="Your answer" class="form-control form-control-lg"></div>
+            
+        </div>
+        <div>
+            <span class="form-control-lg " >comments   </span>
+            
+            
+            <div>
+                <input  formControlName="comments" placeholder="Your answer" class="form-control form-control-lg">
+            </div>
+        </div>
+        <button class="btn btn-primary" >Submit</button>
+        <!-- <button [disabled]="form.invalid" (click)="submitForm()">Submit</button> -->
+    
+    </form>
+</div>
 
 <!-- <p> Form Data Below</p>
 
